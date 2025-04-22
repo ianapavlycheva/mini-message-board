@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="/style.css" />
     <title>Mini Message Board</title>
   </head>
   <body>
-    <h1>Mini Message Board</h1>
-    <ul>
+    <div class="container">
+      <h1>Mini Message Board</h1>
+
       <% messages.forEach(message => { %>
-      <li>
-        <strong><%= message.user %></strong>: <%= message.text %>
-        <em>(<%= message.added.toLocaleString() %>)</em>
-      </li>
+      <div class="message">
+        <p><strong><%= message.user %></strong></p>
+        <p><%= message.text %></p>
+        <p><em>(<%= message.added.toLocaleString() %>)</em></p>
+      </div>
       <% }) %>
-    </ul>
-    <p><a href="/new">Add a new message</a></p>
+
+      <p>
+        <a href="/new"><button>Add a new message</button></a>
+      </p>
+    </div>
   </body>
 </html>

@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="/style.css" />
     <title>New Message</title>
   </head>
   <body>
-    <h1>Add a New Message</h1>
-    <form action="/new" method="POST">
-      <div>
-        <label for="user">Name:</label>
-        <input type="text" id="user" name="user" required />
+    <div class="container">
+      <h1>Leave a Message</h1>
+      <form action="/new" method="POST">
+        <input type="text" name="user" placeholder="Your name" required />
+        <textarea
+          name="text"
+          rows="4"
+          placeholder="Your message"
+          required
+        ></textarea>
+        <button type="submit">Post Message</button>
+      </form>
+      <div style="margin-top: 2rem">
+        <a href="/"><button>Back to Messages</button></a>
       </div>
-      <div>
-        <label for="text">Message:</label>
-        <textarea id="text" name="text" required></textarea>
-      </div>
-      <button type="submit">Submit</button>
-    </form>
-    <p><a href="/">← Back to Messages</a></p>
+    </div>
   </body>
 </html>
