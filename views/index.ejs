@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mini Message Board</title>
+  </head>
+  <body>
+    <h1>Mini Message Board</h1>
+  <ul>
+    <% messages.forEach(message => { %>
+      <li>
+        <strong><%= message.user %></strong>: 
+        <%= message.text %> 
+        <em>(<%= message.added.toLocaleString() %>)</em>
+      </li>
+    <% }) %>
+  </ul>
+    </ul>
+  </body>
+</html>
