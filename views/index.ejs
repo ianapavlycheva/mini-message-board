@@ -10,6 +10,9 @@
 
       <% messages.forEach(message => { %>
       <div class="message">
+        <a href="/message/<%= message.id %>"
+          ><button class="open-button">Open</button></a
+        >
         <p><strong><%= message.user %></strong></p>
         <p><%= message.text %></p>
         <p><em>(<%= message.added.toLocaleString() %>)</em></p>
